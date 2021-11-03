@@ -1,0 +1,27 @@
+#include <stdio.h>
+int Divisor(int m,int n);
+int main(){
+    int m,n;
+printf("enter m");
+scanf("%d",&m);
+printf("enter n");
+scanf("%d",&n);
+Divisor(m,n);
+
+return 0;}
+
+int Divisor(int m,int n){
+    int i,max;
+    if(m>n){
+        max=m;
+    }
+    else{
+        max=n;
+    }
+    for(i=2;i<max;i++){
+        if(m%i==0 && n%i==0){
+            printf("%d ",i);
+        }
+    }
+
+}
