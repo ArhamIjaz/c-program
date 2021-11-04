@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <math.h>
+float input(float hrs);
+int main(){
+float hr1,result;
+printf("enter the hours");
+scanf("%f",&hr1);
+result=input(hr1);
+printf("the charges are %f",result);
+return 0;
+}
+float input(float hrs){
+    hrs = ceil(hrs);
+    float charges=0,rem;
+    if(hrs<=3){
+        charges=2.0;
+    }
+    else if(hrs>3 && hrs<=24){
+        rem=hrs-3;
+        charges=2+(rem*0.5);
+    }
+    else{
+        printf("invalid input");
+    }
+    return charges;
+}
