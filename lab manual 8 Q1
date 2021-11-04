@@ -1,0 +1,19 @@
+#include <stdio.h>
+int random(int lower, int upper);
+int main(){
+int num1,num2,num3,num4,num5,num6;
+num1=random(1,2);
+num2=random(1,100);
+num3=random(0,9);
+num4=random(1000,1112);
+num5=random(-1,1);
+num6=random(-3,11);
+printf("the number1 is %d\n the number2 is %d\n the number3 is %d\n the number4 is %d\n the number5 is %d\n the number6 is %d\n",num1,num2,num3,num4,num5,num6);
+return 0;}
+
+int random(int lower, int upper){
+    int value,n;
+    n=upper-lower+1;
+    value=srand()% n + lower;
+    return value;
+}
