@@ -1,0 +1,21 @@
+
+#include <stdio.h>
+
+int main()
+{
+    int arr[5]={1,2,3,4,5};
+    int i,rate,hours;
+    for(i=0;i<5;i++){
+        printf("enter the hourly rate for employer %d\n",arr[i]);
+        scanf("%d",&rate);
+        printf("enter the no. of hours for employer %d\n",arr[i]);
+        scanf("%d",&hours);
+      arr[i]=rate*hours;
+    }
+    for(int j=0;j<5;j++){
+        printf("the salary of employer %d is $%d\n",j+1,arr[j]);
+    }
+    
+
+    return 0;
+}
