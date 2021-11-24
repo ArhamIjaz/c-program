@@ -1,0 +1,90 @@
+#include <stdio.h>
+
+int getArray(int Array[])
+
+{
+
+    int i;
+
+    for (i=0;i<10;i++)
+
+    {
+
+    printf("Please Enter The Value\n");
+
+    scanf("%d", &Array[i]);
+
+    }
+
+    return 0;
+
+}
+
+int FindEven(int Array[])
+
+{
+
+    int i,j=0;
+
+    for(i=0;i<10;i++)
+
+    {
+
+        if (Array[i]%2==0)
+
+        {
+
+            j++;
+
+        }
+
+ 
+
+    }
+
+    return j;
+
+}
+int ModifyArray(int arr[]){
+    int i;
+    for(i=0;i<10;i++){
+        
+        printf("%d\n",arr[i]*4);
+    }
+    return 0;
+}
+int FindMin(int a[]){
+      int i,smallest;
+     smallest = a[0];
+  
+   for (i = 0; i < 10; i++) {
+      if (a[i] < smallest) {
+         smallest = a[i];
+      }
+   }
+   return smallest;
+}
+int main()
+
+{
+
+    int Array[10]={0};
+
+    int i;
+    getArray(Array);
+
+    for(i=0;i<10;i++)
+
+    {
+
+        printf("%d\n", Array[i]);
+
+    }
+
+    printf("The Total Number of Even Numbers you Entered is %d\n", FindEven(Array));
+    ModifyArray(Array);
+    printf("The smallest number is  %d\n", FindMin(Array));
+
+    return 0;
+
+}
