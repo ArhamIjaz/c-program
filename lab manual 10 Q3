@@ -1,0 +1,21 @@
+
+#include <stdio.h>
+
+int main()
+{
+    int arr[5]={1,2,3,4,5};
+    int i,marks,percent;
+    int static sum=0;
+    for(i=0;i<5;i++){
+        printf("enter the subject %d marks\n",arr[i]);
+        scanf("%d",&arr[i]);
+      sum=sum+arr[i];
+      percent=sum*100/500;
+    }
+        printf("the sum is %d out of 500 \n",sum);
+        printf("the percentage is %d%% \n",percent);
+    
+    
+
+    return 0;
+}
