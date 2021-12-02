@@ -1,0 +1,27 @@
+#include <stdio.h>
+void createArray(int *arr,int n);
+int main(){
+int arr1[10]={0};
+int arr2[10]={0};
+int n1,n2,j;
+printf("enter size of array 1\n");
+scanf("%d",&n1);
+printf("enter size of array 2\n");
+scanf("%d",&n2);
+createArray(arr1,n1);
+createArray(arr2,n2);
+setUnion(arr1,arr2,n1,n2,arr3);
+return 0;
+}
+void createArray(int *arr,int n){
+    int i;
+    for (i=0;i<n;i++){
+        printf("enter the value\n");
+        scanf("%d",(arr+i));
+    }
+}
+void setUnion(int){
+
+
+
+}
