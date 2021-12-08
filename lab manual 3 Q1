@@ -1,0 +1,58 @@
+#include<stdio.h>
+int main()
+{
+    int n;
+    printf("ENTER THE NUMBER OF ROWS AND COLUMNS ");
+    scanf("%d",&n);
+    int a[n][n];
+
+    declaration(n,a);
+    printf("THE ARRAY DECLARED IS ");
+    printarray(n,a);
+
+    swaparray(n,a);
+    printf("THE SWAPPED ARRAY IS ");
+    printarray(n,a);
+
+    return 0;
+}
+
+void declaration(int num,int arr[][num])
+{
+    for(int i=0;i<num;i++)
+        for(int j=0;j<num;j++)
+    {
+        printf("ENTER THE VALUE ");
+        scanf("%d",&arr[i][j]);
+    }
+    printf("here are the values boi \n");
+
+
+}
+
+int swaparray(int num, int arr[][num])
+{
+    int i,j;
+    int temp;
+    for(i=0,j=num-1;i<num;i++,j--)
+    {
+        temp=arr[i][i];
+        arr[i][i]=arr[i][j];
+        arr[i][j]=temp;
+    }
+}
+
+int printarray(int num, int arr[][num])
+{
+    printf("\n");
+    for(int i=0;i<num;i++){
+    for(int j=0;j<num;j++)
+      {
+        printf("%3d",arr[i][j]);
+    }
+
+    printf("\n");
+
+    }
+    printf("\n\n\n");
+}
