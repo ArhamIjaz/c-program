@@ -1,0 +1,49 @@
+#include <stdio.h>
+struct time{
+    int secs;
+    int mins;
+    int hrs;
+};
+
+void printTime(struct time t);
+struct time AddTime(struct time t1,struct time t2);
+int main()
+{   
+    /*struct time result;*/
+    struct time t1;
+    struct time t2;
+    printTime(t1);
+    printTime(t2);
+    AddTime(t1,t2);
+    /*printf("%d : %d : %d \n",result.hrs,result.mins,result.secs);*/
+    return 0;
+}
+void printTime(struct time t){
+    printf("\nenter the hours\n");
+    scanf("%d",&t.hrs);
+    printf("enter the minutes\n");
+    scanf("%d",&t.mins);
+    printf("enter the seconds\n");
+    scanf("%d",&t.secs);
+    printf("%dhrs : %dmins : %dsecs\n ",t.hrs,t.mins,t.secs);
+    
+}
+struct time AddTime(struct time t1,struct time t2){
+    struct time t3;
+    t3.secs=t1.secs+t2.secs;
+    t3.mins=t1.mins+t2.mins;
+    t3.hrs=t1.hrs+t2.hrs;
+    if(t3.secs>=60){
+        t3.secs-=60;
+        t3.mins+=1;
+    }
+    if(t3.mins>=60){
+         t3.mins-=60;
+         t3.hrs=t3.hrs+1;
+    }
+    if(t3.hrs>=24){
+        t3.hrs=t3.hrs-24;
+    }
+    printf("%d : %d : %d \n",t3.hrs,t3.mins,t3.secs);
+    return t3;
+}
